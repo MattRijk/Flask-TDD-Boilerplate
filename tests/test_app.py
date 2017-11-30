@@ -1,6 +1,7 @@
-import unittest
 import os
-from app import app
+import unittest
+
+from main.app import app
 
 
 class BasicTestCase(unittest.TestCase):
@@ -26,7 +27,7 @@ class FlaskrTestCase(unittest.TestCase):
     def test_index(self):
         rv = self.app.get('/')
         self.assertEqual(rv.status_code, 200)
-       
+
 
 if __name__ == '__main__':
     unittest.main()
